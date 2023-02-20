@@ -51,13 +51,13 @@ void verifica_porcentagem(char *sexo, int *opiniao){
     int aprovacoes_femininas = 0;
     int reprovacoes_masculinas = 0;
     for(int i = 0; i < 5; i++){
-        if ((sexo[i] == 'F') && (opiniao[i] == 1)){ // Erro: comparison between pointer and integer
+        if ((sexo[i] == 'F') && (opiniao[i] == 1)){ 
             aprovacoes_femininas++;
         }
     }
 
     for(int i = 0; i < 5; i++){
-        if ((sexo[i] == 'M') && (opiniao[i] == 2)){ // Erro: comparison between pointer and integer
+        if ((sexo[i] == 'M') && (opiniao[i] == 2)){
             reprovacoes_masculinas++;
         }
     }
@@ -76,8 +76,8 @@ int main(void){
         printf("Memória insuficiente.");
         return 1;
     }
-    questionario_produto(sexo, opiniao); // Erro: passing argument 2 of 'questionario_produto' from incompatible pointer type
-    verifica_porcentagem(sexo, opiniao); // Erro: passing argument 2 of 'verifica_porcentagem' from incompatible pointer type
+    questionario_produto(sexo, opiniao);
+    verifica_porcentagem(sexo, opiniao);
     free(sexo);
     free(opiniao);
     return 0;
